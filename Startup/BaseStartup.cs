@@ -20,15 +20,23 @@ namespace Startup
     public abstract class BaseStartup
     {
         public IConfiguration _configs {get;}
-        private readonly CorsPolicy _corsPolicy;
+        private CorsPolicy _corsPolicy {get;set;}
         private readonly EStartupType _type;
-        private readonly List<EConfigs> _eConfigs;
+        private List<EConfigs> _eConfigs {get;set;}
 
-        public BaseStartup(IConfiguration configuration, EStartupType type, List<EConfigs> eConfigs, CorsPolicy corsPolicy) {
+        public BaseStartup(IConfiguration configuration, EStartupType type) {
             _configs = configuration;
             _type = type;
-            _eConfigs = eConfigs;
+        }
+        /// <summary>Sets CORS</summary>
+        /// <param name="corsPolicy">The main IServiceCollection's reference</param>
+        protected void SetCors(CorsPolicy corsPolicy) {
             _corsPolicy = corsPolicy;
+        }
+        /// <summary>Sets Configs</summary>
+        /// <param name="eConfigs">The main IServiceCollection's reference</param>        
+        protected void SetConfigs(List<EConfigs> eConfigs) {
+            _eConfigs = eConfigs;
         }
         /// <summary>Adds JWT Authentication</summary>
         /// <param name="services">The main IServiceCollection's reference</param>
