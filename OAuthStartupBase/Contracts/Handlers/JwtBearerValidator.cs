@@ -1,6 +1,6 @@
 using System;
 
-namespace Startup.Contracts.Handlers
+namespace OAuthStartupBase.Contracts.Handlers
 {
     public class JwtBearerValidator<T>
     {

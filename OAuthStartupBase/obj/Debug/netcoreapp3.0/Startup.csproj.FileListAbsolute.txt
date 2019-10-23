@@ -1,0 +1,8 @@
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\bin\Debug\netcoreapp3.0\Startup.deps.json
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\bin\Debug\netcoreapp3.0\Startup.dll
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\bin\Debug\netcoreapp3.0\Startup.pdb
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\obj\Debug\netcoreapp3.0\Startup.csprojAssemblyReference.cache
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\obj\Debug\netcoreapp3.0\Startup.AssemblyInfoInputs.cache
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\obj\Debug\netcoreapp3.0\Startup.AssemblyInfo.cs
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\obj\Debug\netcoreapp3.0\Startup.dll
+C:\Users\caio.saldanha\Documents\Projects\OAuth2.0Startup\Startup\obj\Debug\netcoreapp3.0\Startup.pdb

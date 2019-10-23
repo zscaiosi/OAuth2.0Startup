@@ -1,4 +1,4 @@
-namespace Startup.Enums
+namespace OAuthStartupBase.Enums
 {
     public enum EStartupType
     {

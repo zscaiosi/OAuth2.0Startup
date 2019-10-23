@@ -3,17 +3,17 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
-using Startup.Enums;
+using OAuthStartupBase.Enums;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using System.Collections.Generic;
-using Startup.Contracts.Policies;
+using OAuthStartupBase.Contracts.Policies;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Threading.Tasks;
 using System;
-using Startup.Extensions;
+using OAuthStartupBase.Extensions;
 
 namespace Startup
 {

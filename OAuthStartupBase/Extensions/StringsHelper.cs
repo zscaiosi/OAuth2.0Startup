@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Startup.Extensions {
+namespace OAuthStartupBase.Extensions {
     public static class StringsHelper {
         /// <summary>
         /// Formats a policy's name
