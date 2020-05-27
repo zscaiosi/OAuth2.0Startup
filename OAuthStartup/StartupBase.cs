@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+using OAuthStartup.Extensions;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace OAuthStartup
@@ -18,6 +18,7 @@ namespace OAuthStartup
     {
         protected IConfiguration Configuration {get;set;}
         protected Action<CorsPolicyBuilder> CorsPolicyAction {get;set;}
+        protected StartupEnums AuthType {get;set;}
         public StartupBase(IConfiguration configuration, Action<CorsPolicyBuilder> corsPolicy, bool useDefaultSecurity = true, StartupEnums authType = StartupEnums.JwtBearer)
         {
             Configuration = configuration;
@@ -42,6 +43,12 @@ namespace OAuthStartup
             // Default services an API needs to have
             services.AddCors();
             services.AddSingleton<IConfiguration>(Configuration);
+
+            if (AuthType == StartupEnums.JwtBearer)
+                services.AddDefaultJwtAuthentication(Configuration);
+            else
+                services.AddDefaultBasicAuthentication(Configuration);
+
             services.AddControllers();
         }
         /// <summary>
