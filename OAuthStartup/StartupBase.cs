@@ -14,15 +14,18 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 
 namespace OAuthStartup
 {
-    public abstract class StartupBase
+    public abstract class BaseStartup
     {
         protected IConfiguration Configuration {get;set;}
         protected Action<CorsPolicyBuilder> CorsPolicyAction {get;set;}
         protected StartupEnums AuthType {get;set;}
-        public StartupBase(IConfiguration configuration, Action<CorsPolicyBuilder> corsPolicy, bool useDefaultSecurity = true, StartupEnums authType = StartupEnums.JwtBearer)
+        protected bool UseDefaultSecurity {get;set;}
+        public BaseStartup(IConfiguration configuration, Action<CorsPolicyBuilder> corsPolicy, bool useDefaultSecurity = true, StartupEnums authType = StartupEnums.JwtBearer)
         {
             Configuration = configuration;
             CorsPolicyAction = corsPolicy;
+            UseDefaultSecurity = useDefaultSecurity;
+            AuthType = authType;
         }
         /// <summary>
         /// 
